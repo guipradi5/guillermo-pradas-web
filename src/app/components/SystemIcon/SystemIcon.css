@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --icon-highlight-color: rgba(0, 75, 172, 0.3)
+}
+
+.systemIcon{
+    width: 70px;
+    height: min-content;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.80em;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+    p {
+        cursor: default;
+        margin-top: 5px;
+        line-height: 1;
+        text-align: center;
+        user-select: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    &--highlight {
+        background: var(--icon-highlight-color)
+    }
+}
