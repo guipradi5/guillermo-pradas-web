@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --navBar-background-color: rgb(50, 50, 50);
+    --navBar-background-accent: rgb(35, 35, 35);
+    --navBar-foreground-color: rgb(210, 210, 210);
+    --time-section-width: 60px;
+    --before-square-size: 50px;
+}
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+        --navBar-background-color: rgb(205, 205, 205);
+        --navBar-background-accent: rgb(150, 150, 150);
+        --navBar-foreground-color: rgb(10, 10, 10);    
+    }
+  }
+
+.systemWindow{
+    border: 2px solid #878684;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    &__topBar{
+        padding: 0 0 0 10px;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: blue;
+        border-bottom: 2px solid #878684;
+    }
+    &__body{
+        color: black;
+        background: rgb(236, 236, 236);
+        padding: 10px;
+        min-height: calc(100% - 1.5em - 2px);
+    }
+}

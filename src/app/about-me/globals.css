@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    .desktop {
+        display: block;
+        .aboutMe {
+            height: 100%
+        }
+    }
+
+    .systemWindow{
+        height: 100%;
+        width: 100%;
+    }
+}

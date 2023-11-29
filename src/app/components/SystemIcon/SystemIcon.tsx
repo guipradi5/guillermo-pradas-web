@@ -18,7 +18,11 @@ const SystemIcon = (props: any) => {
       }
       case 2: {
         setIconClass(initialIconClass)
-        router.push(props.href)
+        if(props.href){
+          router.push(props.href)
+        } else {
+          props.onTrigger()
+        }
         break;
       }
       default: {
@@ -32,7 +36,7 @@ const SystemIcon = (props: any) => {
   useEffect(() => {
     const handleOutSideClick = (event:any) => {
       if (!ref.current?.contains(event.target)) {
-        handleClick({detail: null})
+        handleClick({detail: 0})
       }
     };
 

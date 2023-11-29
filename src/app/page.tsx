@@ -7,12 +7,12 @@ import SystemIcon from "./components/SystemIcon/SystemIcon";
 
 export default function Home() {
   return (
-    <main className="desktop">
+    <div>
         <SystemIcon href="/blog" imgsrc="/icons/blog.png" linkName="Blog" />
         <SystemIcon href="/about-me" imgsrc="/icons/person.png" linkName="About Me" />
         <SystemIcon href="/web" imgsrc="/icons/internet.png" linkName="Web Projects" />
         <SystemIcon href="/games" imgsrc="/icons/joystick.png" linkName="Game Projects" />
-        <SystemIcon href="/contact" imgsrc="/icons/postcard.png" linkName="Contact" />
-    </main>
+        <SystemIcon onTrigger={() => alert("Open Contact Window")} imgsrc="/icons/postcard.png" linkName="Contact" />
+    </div>
   )
 }

@@ -22,17 +22,23 @@ const Bar = () => {
     return `${splittedDate[0]}:${splittedDate[1]}`
   }
 
+  function turnOff() {
+    alert("Turn Page Off")
+  }
+
   return (
     <nav className="navBar">
       <div className="navBar__wrapper">
         <div className="navBar__navigation">
-          <SystemButton buttonText="Turn Off" buttonImage="/icons/power.png" />
+          <SystemButton buttonText="Turn Off" buttonImage="/icons/power.png" onTrigger={turnOff} />
           
           <div className="navBar__navigation-links">
+            <Link href="/" title="Main Page"><img src="/icons/blog.png"/></Link>
+            <Link href="/blog" title="Blog"><img src="/icons/blog.png"/></Link>
             <Link href="/about-me" title="About Me"><img src="/icons/person.png"/></Link>
             <Link href="/web" title="Web Projects"><img src="/icons/internet.png"/></Link>
             <Link href="/games" title="Game Projects"><img src="/icons/joystick.png"/></Link>
-            <Link href="/contact" title="Contact"><img src="/icons/postcard.png"/></Link>
+            <a href="#" onClick={() => alert("Open Contact Window")} title="Contact"><img src="/icons/postcard.png"/></a>
           </div>
         </div>
         <div className='navBar__time'>

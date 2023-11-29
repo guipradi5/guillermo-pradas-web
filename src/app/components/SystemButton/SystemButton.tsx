@@ -1,13 +1,32 @@
 import React from 'react';
+import { useRouter } from 'next/navigation'
 import './SystemButton.css'
 
-const SystemButton = (props:any) => {
+const SystemButton = ({buttonImage = '', buttonText = '', modifiers = '', href = '', onTrigger = () => {}}) => {
+
+  const router = useRouter()
+
+  const systemButtonClassName = "systemButton"
+  let classModifiers = ''
+  if(modifiers) {
+    modifiers.split(" ").forEach((mod:string) => {classModifiers += `${systemButtonClassName}--${mod} `})
+  }
+  const buttonClasses = `${systemButtonClassName} ${classModifiers}`
+
+  function goToPage(){
+    if(href){
+      router.push(href)
+    } else {
+      onTrigger()
+    }
+  }
+
   return (
-    <button className="systemButton">
-      {props.buttonImage ? (
-        <img src={props.buttonImage} title={props.buttonText} />
+    <button className={buttonClasses} onClick={goToPage}>
+      {buttonImage ? (
+        <img src={buttonImage} title={buttonText} />
       ) : (
-        <span>{props.buttonText}</span>
+        <span>{buttonText}</span>
       )}
       </button>
   );
