@@ -22,6 +22,7 @@
     border: 2px solid #878684;
     border-top: 2px solid white;
     border-left: 2px solid white;
+    box-shadow: var(--shadow);
     &__topBar{
         padding: 0 0 0 10px;
         display:flex;

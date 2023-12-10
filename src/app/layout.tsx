@@ -12,10 +12,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en">
       <body>
         <div className="crtOverlay"></div>
+        <Bar />
         <main className="desktop">
           {children}
         </main>
-        <Bar />
       </body>
     </html>
   )

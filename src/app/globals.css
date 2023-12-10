@@ -15,12 +15,13 @@
   --body-padding: 25px;
   --navBar-height: 50px;
   --button-pressed-background: rgb(230, 230, 230);
+  --shadow: 2px 2px 1px rgba(29, 29, 29, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-color: #252733;
+    --background-color: #212753;
   }
 }
 
