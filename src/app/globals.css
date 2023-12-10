@@ -21,7 +21,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-color: #212753;
+    --background-color: #424981;
   }
 }
 
@@ -50,15 +50,29 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: steps(32);
   }
-
+  .title{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    #name, #job {
+      line-height: 0.8em;
+      text-shadow: 3px 3px black;
+      text-align: right;
+    }
+    #name {
+        font-size: 4em;
+    }
+  }
   .desktop {
     height: calc(100vh - var(--navBar-height) - var(--body-padding) - 20px);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: flex-start;
+    .apps {
+      display: inline-flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
+    }
   }
 
   @keyframes static {
@@ -68,5 +82,37 @@ body {
 
   img{
     image-rendering: pixelated;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  
+  body {
+    padding: 5px;
+    
+    .title{
+      position: initial;
+      margin-bottom: 30px;
+      #name, #job {
+        line-height: 0.8em;
+        text-shadow: 3px 3px black;
+        text-align: right;
+      }
+      #name {
+          font-size: 2.5em;
+      }
+    }
+    .desktop {
+      height: calc(100vh - 10px - 50px);
+      top: 50px;
+      flex-direction: row;
+      .apps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 "use client"
-import React, {useState, useEffect} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import Link from 'next/link'
 import SystemButton from '../SystemButton/SystemButton';
 import './Bar.css'
@@ -9,6 +9,7 @@ import './Bar.css'
 const Bar = () => {
 
   let [date,setDate] = useState(new Date())
+  let [isBarOpen,setIsBarOpen] = useState(false)
 
   useEffect( () => {
     let timer = setInterval(()=>setDate(new Date()), 1000)
@@ -26,18 +27,23 @@ const Bar = () => {
     alert("Turn Page Off")
   }
 
+  function toggleBar() {
+    setIsBarOpen(!isBarOpen)
+  }
+
   return (
-    <nav className="navBar">
+    <nav className={`navBar ${isBarOpen ? 'navBar--open' : ''}`}>
       <div className="navBar__wrapper">
+        <div className="navBar__circle" onClick={toggleBar}><img src="/icons/logo_trans.png"/></div>
         <div className="navBar__navigation">
           <SystemButton buttonText="Turn Off" buttonImage="/icons/power.png" onTrigger={turnOff} />
           
           <div className="navBar__navigation-links">
-            <Link href="/" title="Main Page"><img src="/icons/blog.png"/></Link>
-            <Link href="/blog" title="Blog"><img src="/icons/blog.png"/></Link>
-            <Link href="/about-me" title="About Me"><img src="/icons/person.png"/></Link>
-            <Link href="/web" title="Web Projects"><img src="/icons/internet.png"/></Link>
-            <Link href="/games" title="Game Projects"><img src="/icons/joystick.png"/></Link>
+            <Link href="/" title="Main Page" onClick={() => setIsBarOpen(false)}><img src="/icons/logo_red_shadow_trans.png"/></Link>
+            <Link href="/blog" title="Blog" onClick={() => setIsBarOpen(false)}><img src="/icons/blog.png"/></Link>
+            <Link href="/about-me" title="About Me" onClick={() => setIsBarOpen(false)}><img src="/icons/person.png"/></Link>
+            <Link href="/web" title="Web Projects" onClick={() => setIsBarOpen(false)}><img src="/icons/internet.png"/></Link>
+            <Link href="/games" title="Game Projects" onClick={() => setIsBarOpen(false)}><img src="/icons/joystick.png"/></Link>
             <a href="#" onClick={() => alert("Open Contact Window")} title="Contact"><img src="/icons/postcard.png"/></a>
           </div>
         </div>
