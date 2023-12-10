@@ -24,6 +24,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 2;
 
     &__wrapper{
         width: 100vw;
@@ -48,7 +49,6 @@
         width: calc(100vw - var(--time-section-width));
         padding-left: 20px;
         display: flex;
-        align-items: center;
         &-links{
             display: flex;
             width: 100%;
@@ -109,6 +109,7 @@
             padding: 0 0 25px 0;
             flex-direction: column-reverse;
             justify-content: space-between;
+            align-items: center;
             &-links{
                 flex-direction: column;
                 align-items: center;

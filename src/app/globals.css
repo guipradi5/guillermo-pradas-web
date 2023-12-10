@@ -65,6 +65,8 @@ body {
   }
   .desktop {
     height: calc(100vh - var(--navBar-height) - var(--body-padding) - 20px);
+    position: relative;
+    z-index: 1;
     .apps {
       display: inline-flex;
       flex-direction: column;
@@ -105,7 +107,6 @@ body {
     }
     .desktop {
       height: calc(100vh - 10px - 50px);
-      top: 50px;
       flex-direction: row;
       .apps {
         display: flex;
