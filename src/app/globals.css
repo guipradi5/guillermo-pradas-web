@@ -25,7 +25,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-color: #424981;
+    --background-color: #171c31;
   }
 }
 
@@ -34,8 +34,15 @@ body {
   font-size: 20px;
   padding: var(--body-padding);
   color: rgb(var(--foreground-rgb));
-  background: var(--background-color);
+  background: url("/img/background-dark.png");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--background-color);
   height: 100vh;
+
+  a {
+    text-decoration: underline;
+  }
 
   .crtOverlay{
     position: fixed;
@@ -90,6 +97,12 @@ body {
       transform: translateX(-50%);
     }
 
+    .credit {
+      position:absolute;
+      bottom: -15px;
+      right: -15px;
+      font-size: 1.1rem;
+    }
   }
 
   @keyframes static {

@@ -22,6 +22,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <main className="desktop">
           <DesktopApps />
           {children}
+          <div className="credit">Artwork by <a href="https://martavidal.carrd.co/" target="_blank">Marta Vidal González</a></div>
         </main>
       </body>
     </html>
