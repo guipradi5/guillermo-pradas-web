@@ -14,13 +14,13 @@ const Bar = () => {
   useEffect( () => {
     let timer = setInterval(()=>setDate(new Date()), 1000)
     return function cleanup() {
-      clearInterval(timer)
-    }
+      clearInterval(timer)   
+  }
   })
 
   const formattedDate = () => {
     const splittedDate = date.toLocaleTimeString().split(":")
-    return `${splittedDate[0]}:${splittedDate[1]}`
+    return `${splittedDate[0]}:${splittedDate[1]}` 
   }
 
   function turnOff() {

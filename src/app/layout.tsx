@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Bar from "./components/Bar/Bar"
+import dynamic from 'next/dynamic'
+import DesktopApps from './DesktopApps'
+const Bar = dynamic(() => import("./components/Bar/Bar"), { ssr: false })
 
 export const metadata: Metadata = {
   title: "Guillermo Pradas",
@@ -18,6 +20,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           <h2 id="job">Web Developer and Game Designer</h2>
         </div>
         <main className="desktop">
+          <DesktopApps />
           {children}
         </main>
       </body>

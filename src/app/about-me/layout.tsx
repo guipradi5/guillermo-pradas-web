@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Window from "../components/Window/Window"
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Guillermo Pradas - About Me',
-  description: 'About Guillermo',
+  description: 'About Guillermo Pradas',
 }
 
 export default function RootLayout({
@@ -15,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <main className="aboutMe">
+    <Window windowTitle="About Me">
       {children}
-    </main>
+    </Window>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Window from "../components/Window/Window"
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <main className="blogPage">
+    <Window windowTitle="Blog">
       {children}
-    </main>
+    </Window>
   )
 }

@@ -27,7 +27,7 @@
     z-index: 2;
 
     &__wrapper{
-        width: 100vw;
+        width: 99vw;
         display: flex;
         position: relative;
         align-items: center;
