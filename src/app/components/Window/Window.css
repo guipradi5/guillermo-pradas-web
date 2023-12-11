@@ -50,6 +50,7 @@
         color: black;
         background: rgb(236, 236, 236);
         padding: 10px;
-        min-height: calc(100% - 1.5em);
+        height: calc(100% - 1.5em);
+        overflow: auto;
     }
 }
