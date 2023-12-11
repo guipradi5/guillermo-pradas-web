@@ -85,7 +85,7 @@ body {
       left: 50%;
       transform: translateX(-50%);
     }
-    
+
   }
 
   @keyframes static {
@@ -117,13 +117,17 @@ body {
       }
     }
     .desktop {
-      height: calc(100vh - 10px - 50px);
+      min-height: calc(100vh - 10px - 90px);
       flex-direction: row;
       .apps {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+      }
+      > .systemWindow {
+        height: 90%;
+        min-height: 90%;
       }
     }
   }
