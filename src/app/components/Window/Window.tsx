@@ -11,7 +11,9 @@ const Window = (props: {windowTitle:string, children: React.ReactNode}) => {
     <div className="systemWindow">
       <div className="systemWindow__topBar">
         <div>{windowTitle}</div>
+        <div className="systemWindow__topBar-buttons">
         <SystemButton buttonText='X' modifiers='close' href="/" />
+        </div>
       </div>
       <div className="systemWindow__body">
         {children}

@@ -16,6 +16,10 @@
   --navBar-height: 50px;
   --button-pressed-background: rgb(230, 230, 230);
   --shadow: 2px 2px 1px rgba(29, 29, 29, 0.5);
+
+  --system-border-color: #a7a7a7;
+  --system-border-color-top: rgb(226, 226, 226);
+  --system-border-color-left: rgb(226, 226, 226);
 }
 
 @media (prefers-color-scheme: dark) {
