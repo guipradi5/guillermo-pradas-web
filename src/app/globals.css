@@ -35,6 +35,7 @@ body {
   padding: var(--body-padding);
   color: rgb(var(--foreground-rgb));
   background: url("/img/background-dark.png");
+  image-rendering: pixelated;
   background-size: cover;
   background-position: center;
   background-color: var(--background-color);
@@ -98,9 +99,9 @@ body {
     }
 
     .credit {
-      position:absolute;
-      bottom: -15px;
-      right: -15px;
+      position: fixed;
+      bottom: 55px;
+      right: 5px;
       font-size: 1.1rem;
     }
   }
@@ -120,6 +121,7 @@ body {
   
   body {
     padding: 5px;
+    background-attachment: fixed;
     
     .title{
       position: initial;
@@ -143,8 +145,12 @@ body {
         justify-content: space-between;
       }
       > .systemWindow {
-        height: 90%;
-        min-height: 90%;
+        height: unset;
+        min-height: unset;
+      }
+      
+      .credit {
+        bottom: 5px;
       }
     }
   }

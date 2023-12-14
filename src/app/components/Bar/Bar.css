@@ -7,6 +7,7 @@
     --navBar-background-accent: rgb(35, 35, 35);
     --navBar-foreground-color: rgb(210, 210, 210);
     --navBar-mobile-width: 60px;
+    --navBar-mobile-height: 90vh;
     --time-section-width: 60px;
     --time-section-height: 50px;
     --circle-width: 50px;
@@ -80,7 +81,7 @@
 @media only screen and (max-width: 768px) {
     .navBar{
         position: fixed;
-        top: calc(-98vh + 55px);
+        top: calc((var(--navBar-mobile-height) * -1) + 55px);
         left: 0;
         bottom: unset;
         right: unset;
@@ -91,7 +92,7 @@
         }
 
         &__wrapper{
-            height: 98vh;
+            height: var(--navBar-mobile-height);
             width: var(--navBar-mobile-width);
             border-radius: 0 0 40px 40px;
             flex-direction: column-reverse;

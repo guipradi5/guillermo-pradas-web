@@ -27,6 +27,7 @@
     border-top: var(--window-thickness) solid var(--system-border-color-top);
     border-left: var(--window-thickness) solid var(--system-border-color-left);;
     box-shadow: var(--shadow);
+    z-index: 1;
     &__topBar{
         padding: 0 0 0 10px;
         display:flex;
