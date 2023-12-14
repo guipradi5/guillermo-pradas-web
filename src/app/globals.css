@@ -68,6 +68,8 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+    opacity: 0;
+    transform: translateX(-10px);
     #name, #job {
       line-height: 0.8em;
       text-shadow: 3px 3px black;
@@ -75,6 +77,15 @@ body {
     }
     #name {
         font-size: 4em;
+    }
+    &--anim {
+      transition: all 0.5s ease-in-out;
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    &--ready {
+      opacity: 1;
+      transform: translateX(0px);
     }
   }
   .desktop {

@@ -3,10 +3,10 @@ import React, {useState, useEffect} from 'react';
 import LoadingBar from '../LoadingBar/LoadingBar';
 import './LoadScreen.css'
 
-const LoadScreen = () =>  {
+const LoadScreen = ({onReady = () => {}}) =>  {
     const className = "startup"
-    let [loadingBarTime,setLoadingBarTime] = useState(2000)
     let [startupClasses,setStratupClasses] = useState(className)
+    let [loadingBarTime,setLoadingBarTime] = useState(2000)
     
     let effectFirstRun = true
     useEffect(() => {
@@ -25,7 +25,10 @@ const LoadScreen = () =>  {
             effectFirstRun = false
             setTimeout(() => {
                 setStratupClasses(`${className} ${className}--out`)
-                setTimeout(() =>  setStratupClasses(`${className} ${className}--out ${className}--hide`), 400)
+                setTimeout(() => {
+                    setStratupClasses(`${className} ${className}--out ${className}--hide`)
+                    onReady()
+                }, 400)
             }, outTimeout+400)
         }
     }, [])
