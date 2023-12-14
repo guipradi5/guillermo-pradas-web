@@ -18,6 +18,7 @@
     margin: 0 10px 10px 0;
     img {
         height: 50px;
+        filter: var(--icon-shadow);
     }
     p {
         cursor: default;

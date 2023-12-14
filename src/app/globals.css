@@ -10,28 +10,31 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-color: #e6e6e6;
+  --foreground-rgb: 255, 255, 255;
+  --background-color: #171c31;
   --body-padding: 25px;
   --navBar-height: 50px;
   --button-pressed-background: rgb(230, 230, 230);
-  --shadow: 2px 2px 1px rgba(29, 29, 29, 0.5);
+  --shadow-color: #222;
+  --shadow: 5px 5px 0px var(--shadow-color);
 
   --system-border-color: #a7a7a7;
   --system-border-color-top: rgb(226, 226, 226);
   --system-border-color-left: rgb(226, 226, 226);
+  --icon-shadow: drop-shadow(2px 2px 0px #222);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-color: #171c31;
+    --nothing-for-now: none;
   }
 }
 
 body {
   font-family: "VT323", sans-serif;
   font-size: 20px;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
   padding: var(--body-padding);
   color: rgb(var(--foreground-rgb));
   background: url("/img/background-dark.png");

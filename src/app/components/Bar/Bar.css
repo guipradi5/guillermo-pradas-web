@@ -3,23 +3,15 @@
 @tailwind utilities;
 
 :root {
-    --navBar-background-color: rgb(50, 50, 50);
-    --navBar-background-accent: rgb(35, 35, 35);
-    --navBar-foreground-color: rgb(210, 210, 210);
+    --navBar-background-color: rgb(205, 205, 205);
+    --navBar-background-accent: rgb(150, 150, 150);
+    --navBar-foreground-color: rgb(10, 10, 10); 
     --navBar-mobile-width: 60px;
     --navBar-mobile-height: 90vh;
     --time-section-width: 60px;
     --time-section-height: 50px;
     --circle-width: 50px;
 }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-        --navBar-background-color: rgb(205, 205, 205);
-        --navBar-background-accent: rgb(150, 150, 150);
-        --navBar-foreground-color: rgb(10, 10, 10);    
-    }
-  }
 
 .navBar{
     position: absolute;
@@ -65,6 +57,7 @@
                 img {
                     height: 100%;
                     width: unset;
+                    filter: var(--icon-shadow);
                 }
             }
         }
