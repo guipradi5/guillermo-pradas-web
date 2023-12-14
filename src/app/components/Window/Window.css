@@ -48,10 +48,12 @@
         }
     }
     &__body{
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 1.5em);
+        padding: 10px;
+        overflow: auto;
         color: black;
         background: rgb(236, 236, 236);
-        padding: 10px;
-        height: calc(100% - 1.5em);
-        overflow: auto;
     }
 }

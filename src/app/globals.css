@@ -146,7 +146,7 @@ body {
       }
       > .systemWindow {
         height: unset;
-        min-height: unset;
+        min-height: 94%;
       }
       
       .credit {
