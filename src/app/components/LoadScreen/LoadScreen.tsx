@@ -8,14 +8,12 @@ const LoadScreen = () =>  {
     let [loadingBarTime,setLoadingBarTime] = useState(2000)
     let [startupClasses,setStratupClasses] = useState(className)
     
-    const pathName = window.location.pathname
     let effectFirstRun = true
     useEffect(() => {
         if(effectFirstRun){
             let outTimeout = loadingBarTime
             const visited = localStorage.getItem('visited')
-            console.log(pathName);  
-            if(pathName !== '/'){
+            if(window.location.pathname !== '/'){
                 setLoadingBarTime(1)
                 outTimeout = 1
             } else if(visited){
