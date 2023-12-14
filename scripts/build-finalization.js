@@ -7,6 +7,6 @@ const routes = ['about-me', 'blog', 'games', 'web']
 routes.forEach((route) => {
 fs.copyFile(`./dist/${route}/index.txt`, `./dist/${route}.txt`, (err) => {
     if (err) throw err;
-        console.log(`${route}.txt was copied to destination`);
+        console.log(`${route}'s txt was copy pasted to /dist`);
     });
 })
