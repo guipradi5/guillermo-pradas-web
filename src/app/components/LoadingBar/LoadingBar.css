@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bar-color: white;
+}
+
+.loadingBar {
+    &__content {
+        background: var(--bar-color);
+        height: 100%;
+        text-align: center;
+        color: black;
+    }
+}

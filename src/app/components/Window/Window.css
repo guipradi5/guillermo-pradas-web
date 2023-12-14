@@ -15,8 +15,8 @@
     background: rgb(236, 236, 236);
     border: var(--window-thickness-w) solid var(--system-border-color);
     border-width: var(--window-thickness-h) var(--window-thickness-w);
-    border-top-color: var(--system-border-color-top);
-    border-left-color: var(--system-border-color-left);;
+    border-top-color: var(--system-border-color-other);
+    border-left-color: var(--system-border-color-other);
     box-shadow: var(--shadow);
     z-index: 1;
     &__topBar{

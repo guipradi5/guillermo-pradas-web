@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 import dynamic from 'next/dynamic'
 import DesktopApps from './DesktopApps'
+import LoadScreen from './components/LoadScreen/LoadScreen';
 const Bar = dynamic(() => import("./components/Bar/Bar"), { ssr: false })
+
 
 export const metadata: Metadata = {
   title: "Guillermo Pradas",
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
+
   return (
     <html lang="en">
       <body>
@@ -24,6 +27,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           {children}
           <div className="credit">Artwork by <a href="https://martavidal.carrd.co/" target="_blank">Marta Vidal González</a></div>
         </main>
+        <LoadScreen />
       </body>
     </html>
   )

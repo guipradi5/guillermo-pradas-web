@@ -2,10 +2,10 @@
 import React from 'react';
 
 const year = new Date().getFullYear.toString()
-const Bar = () => {
+const CopyRight = () => {
   return (
     <p>&copy; {year} Guillermo Pradas</p>
         );
 };
 
-export default Bar;
+export default CopyRight;

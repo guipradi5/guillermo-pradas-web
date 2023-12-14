@@ -19,8 +19,7 @@
   --shadow: 5px 5px 0px var(--shadow-color);
 
   --system-border-color: #a7a7a7;
-  --system-border-color-top: rgb(226, 226, 226);
-  --system-border-color-left: rgb(226, 226, 226);
+  --system-border-color-other: rgb(226, 226, 226);
   --icon-shadow: drop-shadow(2px 2px 0px #222);
 }
 
