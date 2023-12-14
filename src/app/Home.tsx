@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import dynamic from 'next/dynamic'
 import DesktopApps from './DesktopApps'
 import LoadScreen from './components/LoadScreen/LoadScreen';
@@ -7,12 +7,15 @@ const Bar = dynamic(() => import("./components/Bar/Bar"), { ssr: false })
 import './globals.css'
 
 const Home = ({children}: {children: React.ReactNode}) => {
-
-    const home = children.props.childProp.segment === "__PAGE__";
-    let [titleClassName,setTitleClassName] = useState(`title ${!home ? 'title--ready': ''}`)
+    let [titleClassName,setTitleClassName] = useState(`title`)
   
+
+    useEffect(() => {
+        setTitleClassName(`title ${window.location.pathname !== '/' ? 'title--ready': ''}`)
+    }, [])
+
     function triggerTitleAnimation() {
-      setTitleClassName(`title ${home ? 'title--anim': 'title--ready'}`)
+      setTitleClassName(`title ${window.location.pathname === '/' ? 'title--anim': 'title--ready'}`)
     }
   
     return (

@@ -93,6 +93,7 @@ body {
     position: relative;
     z-index: 1;
     .apps {
+      height: inherit;
       display: inline-flex;
       flex-direction: column;
       flex-wrap: wrap;
