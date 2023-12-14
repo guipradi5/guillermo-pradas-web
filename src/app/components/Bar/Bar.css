@@ -14,7 +14,7 @@
 }
 
 .navBar{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     z-index: 2;
@@ -73,7 +73,6 @@
 
 @media only screen and (max-width: 768px) {
     .navBar{
-        position: fixed;
         top: calc((var(--navBar-mobile-height) * -1) + 55px);
         left: 0;
         bottom: unset;
