@@ -1,18 +1,50 @@
 "use client"
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import SystemButton from '../SystemButton/SystemButton';
 import './Window.css'
 
 
 
-const Window = (props: {windowTitle:string, children: React.ReactNode}) => {
-  const {children, windowTitle} = props
+const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:boolean, modifiers?:string, position?:{top?:string, right?:string, bottom?:string, left?:string}, onClose?:Function }) => {
+ 
+  const {windowTitle, children, isPage = false, modifiers, position, onClose} = props
+
+  const router = useRouter()
+
+  const windowClasses = () => {
+    let classes = "systemWindow"
+    if(modifiers) {
+      let mods = modifiers.split(" ")
+      mods.forEach((mod: any) => classes += ` systemWindow--${mod}`)
+    }
+    return classes
+  }
+
+  const windowStyle = () => {
+    return position ? {
+      ...(position.top ? {top: position.top} : {}),
+      ...(position.right ? {right: position.right} : {}),
+      ...(position.bottom ? {bottom: position.bottom} : {}),
+      ...(position.left ? {left: position.left} : {}),
+    } : {}
+  }
+
+  function closeWindow(){
+    if(onClose){
+      onClose()
+    } else if(isPage) {
+      router.push("/")
+    }
+
+  }
+  
   return (
-    <div className="systemWindow">
+    <div className={windowClasses()} style={windowStyle()}>
       <div className="systemWindow__topBar">
         <div>{windowTitle}</div>
         <div className="systemWindow__topBar-buttons">
-        <SystemButton buttonText='X' modifiers='close' href="/" />
+        <SystemButton buttonText='X' modifiers='close' onTrigger={closeWindow} />
         </div>
       </div>
       <div className="systemWindow__body">

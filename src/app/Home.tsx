@@ -2,13 +2,35 @@
 import React, {useState, useEffect} from 'react';
 import dynamic from 'next/dynamic'
 import DesktopApps from './DesktopApps'
+import Window from './components/Window/Window';
 import LoadScreen from './components/LoadScreen/LoadScreen';
 const Bar = dynamic(() => import("./components/Bar/Bar"), { ssr: false })
 import './globals.css'
 
 // TODO: See how to make the context its own independent file
-const initialState = {
+type windowType = {
+  id: string,
+  title: string,
+  body: React.JSX.Element,
+  position: {
+    top?: string,
+    right?: string,
+    bottom?: string,
+    left?: string
+  } | undefined,
+  free: boolean | undefined
+}
+
+type initialStateType = {
+  windows: Array<windowType>
+}
+const initialState:initialStateType = {
   windows: []
+}
+
+const initialActions = {
+  createWindow: (title: string, body: React.JSX.Element, free:boolean, position:any) => {},
+  removeWindow: (id: string) => {}
 }
 
 const initialMutators = {
@@ -18,6 +40,7 @@ const initialMutators = {
 
 let initialContext = {
   state: initialState,
+  actions: initialActions,
   mutators: initialMutators
 }
 
@@ -26,19 +49,48 @@ export const GlobalContext = React.createContext(initialContext);
 export default function Home({children}: {children: React.ReactNode}) {
   
     // Context configuration
-    let [state, setState] = useState(initialState)
+    let [state, setState] = useState<initialStateType>(initialState)
 
     const setStateProperty = (prop:any, value:any) => {
       const modState = {...state, [prop]: value}
       setState(modState)
     }
 
+
+    const createWindow = (title: string, body: React.JSX.Element, free:boolean, position:any) => {
+      let windows = state.windows
+      windows.push({id: (Math.random().toString(16).slice(2)), title, body, free, position})
+      context.mutators.setStateProperty('windows', windows)
+    }
+
+    const removeWindow = (id: string) => {
+      let windows = state.windows
+      console.log(windows)
+      const windowIndex = windows.findIndex((window: windowType) => window.id === id)
+      windows.splice(windowIndex, 1);
+      console.log(windows)
+      setState({windows})
+    }
+
     let context = {
       state,
+      actions: {
+        createWindow,
+        removeWindow
+      },
       mutators: {
         setState,
         setStateProperty
       }
+    }
+
+    function windowElements() {
+      return context.state.windows.map(
+        (window: windowType) => 
+        <Window key={window.id} onClose={() => removeWindow(window.id)} windowTitle={window.title} position={window.position}>
+          {window.body}
+        </Window>
+        )
     }
 
     // Home logic
@@ -64,7 +116,8 @@ export default function Home({children}: {children: React.ReactNode}) {
           </div>
           <main className="desktop">
             <DesktopApps />
-           {children}
+            {children}
+            { windowElements() }
             <div className="credit">Artwork by <a href="https://martavidal.carrd.co/" target="_blank">Marta Vidal González</a></div>
           </main>
           <LoadScreen onReady={triggerTitleAnimation} />

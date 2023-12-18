@@ -1,9 +1,10 @@
 "use client"
-import React, {useState, useRef, useEffect, useContext} from 'react';
+import React, {useState, useRef, useEffect, useContext, Component, ReactHTML} from 'react';
 import Link from 'next/link'
 import SystemButton from '../SystemButton/SystemButton';
 import './Bar.css'
 import { GlobalContext } from '../../Home';
+import Contact from '../Contact/Contact';
 
 const Bar = () => {
   const context = useContext(GlobalContext);
@@ -31,12 +32,6 @@ const Bar = () => {
     setIsBarOpen(!isBarOpen)
   }
 
-  function createWindow() {
-    //create a window with a tpx file
-    //refer to a context method to add the window to the global context
-    //render the window
-  }
-
   return (
     <nav className={`navBar ${isBarOpen ? 'navBar--open' : ''}`}>
       <div className="navBar__wrapper">
@@ -50,7 +45,7 @@ const Bar = () => {
             <Link href="/about-me" title="About Me" onClick={() => setIsBarOpen(false)}><img src="/icons/person.png"/></Link>
             <Link href="/web" title="Web Projects" onClick={() => setIsBarOpen(false)}><img src="/icons/internet.png"/></Link>
             <Link href="/games" title="Game Projects" onClick={() => setIsBarOpen(false)}><img src="/icons/joystick.png"/></Link>
-            <a href="#" onClick={createWindow} title="Contact"><img src="/icons/postcard.png"/></a>
+            <a href="#" onClick={() => context.actions.createWindow('Contact', Contact(), true, {top: '120px', right: '25px'})} title="Contact"><img src="/icons/postcard.png"/></a>
           </div>
         </div>
         <div className='navBar__time'>

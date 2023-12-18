@@ -11,7 +11,8 @@
     --window-top-bar-buttons-section-color: #5c7aff;
 }
 
-.systemWindow{
+.systemWindow {
+    position: fixed;
     background: rgb(236, 236, 236);
     border: var(--window-thickness-w) solid var(--system-border-color);
     border-width: var(--window-thickness-h) var(--window-thickness-w);
