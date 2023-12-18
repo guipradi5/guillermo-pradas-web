@@ -70,7 +70,7 @@ body {
     right: 20px;
     opacity: 0;
     transform: translateX(-10px);
-    #name, #job {
+    > * {
       line-height: 0.8em;
       text-shadow: 3px 3px black;
       text-align: right;
@@ -150,7 +150,7 @@ body {
       }
     }
     .desktop {
-      min-height: calc(100vh - 10px - 90px);
+      min-height: calc(100dvh - 10px - 90px);
       flex-direction: row;
       .apps {
         display: flex;

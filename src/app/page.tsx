@@ -1,12 +1,8 @@
-'use client';
-import React from "react";
-
-//Detect if we are inside a route, if it's the case, the className should change to -active or somtehing
-
+"use client"
+import React from 'react';
 
 export default function Home() {
-  return (
-    <div>
-    </div>
-  )
+    return (
+      <span></span>
+    )
 }

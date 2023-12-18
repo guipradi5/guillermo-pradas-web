@@ -6,12 +6,46 @@ import LoadScreen from './components/LoadScreen/LoadScreen';
 const Bar = dynamic(() => import("./components/Bar/Bar"), { ssr: false })
 import './globals.css'
 
-const Home = ({children}: {children: React.ReactNode}) => {
-    let [titleClassName,setTitleClassName] = useState(`title`)
+// TODO: See how to make the context its own independent file
+const initialState = {
+  windows: []
+}
+
+const initialMutators = {
+  setState: (newState:any) => {},
+  setStateProperty: (prop:any, value:any) => {}
+}
+
+let initialContext = {
+  state: initialState,
+  mutators: initialMutators
+}
+
+export const GlobalContext = React.createContext(initialContext);
+
+export default function Home({children}: {children: React.ReactNode}) {
   
+    // Context configuration
+    let [state, setState] = useState(initialState)
+
+    const setStateProperty = (prop:any, value:any) => {
+      const modState = {...state, [prop]: value}
+      setState(modState)
+    }
+
+    let context = {
+      state,
+      mutators: {
+        setState,
+        setStateProperty
+      }
+    }
+
+    // Home logic
+    let [titleClassName,setTitleClassName] = useState(`title`)
 
     useEffect(() => {
-        setTitleClassName(`title ${window.location.pathname !== '/' ? 'title--ready': ''}`)
+      setTitleClassName(`title ${window.location.pathname !== '/' ? 'title--ready': ''}`)
     }, [])
 
     function triggerTitleAnimation() {
@@ -19,6 +53,7 @@ const Home = ({children}: {children: React.ReactNode}) => {
     }
   
     return (
+    <GlobalContext.Provider value={context}>
       <html lang="en">
         <body>
           <div className="crtOverlay"></div>
@@ -29,12 +64,12 @@ const Home = ({children}: {children: React.ReactNode}) => {
           </div>
           <main className="desktop">
             <DesktopApps />
-            {children}
+           {children}
             <div className="credit">Artwork by <a href="https://martavidal.carrd.co/" target="_blank">Marta Vidal González</a></div>
           </main>
           <LoadScreen onReady={triggerTitleAnimation} />
         </body>
       </html>
+      </GlobalContext.Provider>
     )
 }
-export default Home;
