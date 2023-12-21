@@ -31,7 +31,7 @@
 
 body {
   font-family: "VT323", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-smooth: never;
   -webkit-font-smoothing : none;
   padding: var(--body-padding);
@@ -45,6 +45,21 @@ body {
 
   a {
     text-decoration: underline;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: ;
+    line-height: 1.1em;
   }
 
   .crtOverlay{

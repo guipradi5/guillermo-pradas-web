@@ -2,3 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+.about-me{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-column-gap: 30px;
+    height: inherit;
+    height: -webkit-fill-available;
+    &__images {
+        position: relative;
+        > img {
+            position: absolute;
+            width: 50%;
+            box-shadow: var(--shadow);
+        }
+
+        .photo {
+            &-1 {
+                top: 50%;
+                right: 0;
+                width: 75%;
+                transform: translateY(-50%);
+            }
+            &-2 {
+                width: 69%;
+            }
+            &-3 {
+                bottom: 0;
+                left: 0;
+                width: 69%;
+            }
+        }
+    }
+    &__text {
+        overflow-y: auto;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    div.about-me{
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+
+        &__images {
+            display: flex;
+            justify-content: space-between;
+            > img {
+                &.photo-1, &.photo-2, &.photo-3 {
+                    position: initial;
+                    top: unset;
+                    right: unset;
+                    bottom: unset;
+                    left: unset;
+                    width: unset;
+                    height: auto;
+                    transform: unset;
+                    max-width: 30%;
+                    box-shadow: var(--shadow);
+                }
+            }
+        }
+    }
+}
