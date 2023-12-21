@@ -13,7 +13,7 @@
 
 .systemWindow {
     position: fixed;
-    background: rgb(236, 236, 236);
+    background: var(--system-background-color);
     border: var(--window-thickness-w) solid var(--system-border-color);
     border-width: var(--window-thickness-h) var(--window-thickness-w);
     border-top-color: var(--system-border-color-other);

@@ -21,6 +21,8 @@
   --system-border-color: #959595;
   --system-border-color-other: rgb(206, 206, 206);
   --icon-shadow: drop-shadow(2px 2px 0px #222);
+  --system-background-color: rgb(236,236,236);
+  --system-secondary-background-color: rgb(204, 204, 204);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,17 +50,19 @@ body {
   }
 
   h1 {
+    line-height: 0.8em;
     font-size: 2em;
   }
   h2 {
+    line-height: 0.8em;
     font-size: 1.75em;
   }
   h3 {
+    line-height: 0.8em;
     font-size: 1.5em;
   }
 
   p {
-    font-size: ;
     line-height: 1.1em;
   }
 
