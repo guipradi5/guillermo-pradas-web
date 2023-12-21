@@ -6,6 +6,7 @@ import Window from './components/Window/Window';
 import LoadScreen from './components/LoadScreen/LoadScreen';
 const Bar = dynamic(() => import("./components/Bar/Bar"), { ssr: false })
 import './globals.css'
+import TurnOffModal from './components/TurnOffModal/TurnOffModal';
 
 // TODO: See how to make the context its own independent file
 type windowType = {
@@ -22,10 +23,12 @@ type windowType = {
 }
 
 type initialStateType = {
-  windows: Array<windowType>
+  windows: Array<windowType>,
+  showTurnOffModal: boolean
 }
 const initialState:initialStateType = {
-  windows: []
+  windows: [],
+  showTurnOffModal: false
 }
 
 const initialActions = {
@@ -69,7 +72,7 @@ export default function Home({children}: {children: React.ReactNode}) {
       const windowIndex = windows.findIndex((window: windowType) => window.id === id)
       windows.splice(windowIndex, 1);
       console.log(windows)
-      setState({windows})
+      setStateProperty('windows', windows)
     }
 
     let context = {
@@ -109,6 +112,9 @@ export default function Home({children}: {children: React.ReactNode}) {
       <html lang="en">
         <body>
           <div className="crtOverlay"></div>
+          { state.showTurnOffModal && 
+            <TurnOffModal />
+          }
           <Bar />
           <div className={titleClassName}>
             <h1 id="name">Guillermo Pradas</h1>

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.turnOffModal {
+    display: block;
+    position: fixed;
+    height: 100dvh;
+    width:100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index:100;
+
+    &--show {
+        opacity: 1;
+    }
+
+    > .systemWindow, > .turnedOff {
+        position:absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-45%, -50%);
+        text-align: center;
+
+        .button-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+    }
+    > .systemWindow {
+        opacity: 1;
+        transition: all 3s ease-in-out;
+    }
+
+    > .turnedOff {
+        opacity: 0;
+        transition: all 3s ease-in-out;
+        h1 {
+            text-shadow: #FC0 0px 0 18px;
+            filter: drop-shadow(0px 0px 13px rgba(255,255,255,0.6));
+        }
+    }
+
+    &--off{
+        background-color: rgba(0,0,0,1);
+        color: #FC0;
+
+        > .systemWindow {
+            opacity: 0;
+            pointer-events: none;
+        }
+        > .turnedOff {
+            opacity: 1;
+        }
+    }
+}

@@ -25,7 +25,7 @@ const Bar = () => {
   }
 
   function turnOff() {
-    alert("Turn Page Off")
+    context.mutators.setStateProperty("showTurnOffModal", true)
   }
 
   function toggleBar() {

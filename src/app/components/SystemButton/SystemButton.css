@@ -44,4 +44,7 @@ button.systemButton{
             background: var(--close-active-background-color);
         }
     }
+    &--long {
+        padding: 0 1em;
+    }
 }
