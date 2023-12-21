@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 20PX;
+
+    &__text {
+        margin-bottom: 15px;
+    }
+
+    > ul {
+        > li { 
+            margin-bottom: 10px;
+
+            > a {
+                font-size: 1.3em;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --window-thickness-w: 1px;
-    --window-thickness-h: 1px;
+    --window-thickness-w: 2px;
+    --window-thickness-h: 2px;
     --time-section-width: 60px;
     --before-square-size: 50px;
     --window-top-bar-color: rgb(59, 81, 179);
@@ -20,6 +20,7 @@
     border-left-color: var(--system-border-color-other);
     box-shadow: var(--shadow);
     z-index: 1;
+
     &__topBar{
         padding: 0 0 0 10px;
         display:flex;

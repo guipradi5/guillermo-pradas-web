@@ -18,8 +18,8 @@
   --shadow-color: #222;
   --shadow: 5px 5px 0px var(--shadow-color);
 
-  --system-border-color: #a7a7a7;
-  --system-border-color-other: rgb(226, 226, 226);
+  --system-border-color: #959595;
+  --system-border-color-other: rgb(206, 206, 206);
   --icon-shadow: drop-shadow(2px 2px 0px #222);
 }
 
@@ -36,10 +36,10 @@ body {
   -webkit-font-smoothing : none;
   padding: var(--body-padding);
   color: rgb(var(--foreground-rgb));
-  background: url("/img/background-dark.png");
-  image-rendering: pixelated;
-  background-size: cover;
-  background-position: center;
+  background: url("./../../public/img/background-dark.png") !important;
+  image-rendering: pixelated !important;
+  background-size: cover !important;
+  background-position: center !important;
   background-color: var(--background-color);
   height: 100vh;
 
