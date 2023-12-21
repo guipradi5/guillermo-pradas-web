@@ -68,7 +68,7 @@ export default function Next() {
                   </div>
                 </div>
                 <p>
-                  Insikt is another "AI powered" company. Their main focus is to develop cloud based applications that monitor and detect possible terror threats around the world. Their main clients are security companies.
+                  Insikt is another &quot;AI powered&quot; company. Their main focus is to develop cloud based applications that monitor and detect possible terror threats around the world. Their main clients are security companies.
                   <br /><br/>
                   My main job in Insikt was to develop front-end functionalities in Angular for one of their products.
                   <br /><br/>
