@@ -15,7 +15,7 @@ export default function Next() {
           <img className="photo-2" src="/img/photo2.png" />
           <img className="photo-1" src="/img/photo1.png" />
         </div>
-        <div className="about-text">
+        <div className="about-me__text">
           <h2>Hi!</h2>
           <p>
             My name is Guillermo. I'm a web developer and game designer based in Barcelona, Spain.
