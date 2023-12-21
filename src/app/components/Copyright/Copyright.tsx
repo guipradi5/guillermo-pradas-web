@@ -6,9 +6,11 @@ export default function CopyRight () {
   return (
     <div>
       <p>
-        &copy;{year} - Guillermo Pradas
-        <br /><br />
         Font: VT323 by <a href="https://github.com/phoikoi" target="_blank">Peter Hull</a>
+        <br /><br />
+        <a href="https://github.com/guipradi5/guillermo-pradas-web" target="_blank">This website's source code</a> @ Github
+        <br />
+        &copy;{year} - Guillermo Pradas
       </p>
     </div>
         )
