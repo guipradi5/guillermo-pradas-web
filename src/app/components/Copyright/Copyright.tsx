@@ -1,11 +1,9 @@
 'use client';
-import React from 'react';
+import React, {useRef} from 'react';
 
-const year = new Date().getFullYear.toString()
-const CopyRight = () => {
+const year = new Date().getFullYear()
+export default function CopyRight () {
   return (
-    <p>&copy; {year} - Guillermo Pradas</p>
-        );
-};
-
-export default CopyRight;
+    <p>&copy;{year} - Guillermo Pradas</p>
+        )
+}

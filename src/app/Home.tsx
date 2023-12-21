@@ -68,10 +68,8 @@ export default function Home({children}: {children: React.ReactNode}) {
 
     const removeWindow = (id: string) => {
       let windows = state.windows
-      console.log(windows)
       const windowIndex = windows.findIndex((window: windowType) => window.id === id)
       windows.splice(windowIndex, 1);
-      console.log(windows)
       setStateProperty('windows', windows)
     }
 

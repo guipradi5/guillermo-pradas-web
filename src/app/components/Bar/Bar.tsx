@@ -5,6 +5,7 @@ import SystemButton from '../SystemButton/SystemButton';
 import './Bar.css'
 import { GlobalContext } from '../../Home';
 import Contact from '../Contact/Contact';
+import CopyRight from '../Copyright/Copyright';
 
 const Bar = () => {
   const context = useContext(GlobalContext);
@@ -49,7 +50,8 @@ const Bar = () => {
           </div>
         </div>
         <div className='navBar__time'>
-          {formattedDate()}
+          <div>{formattedDate()}</div>
+          <button  onClick={() => context.actions.createWindow('Info', CopyRight(), true, {bottom: '90px', right: '20px'})} title="Info">?</button>
         </div>
       </div>
     </nav>

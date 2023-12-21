@@ -68,6 +68,11 @@
         color: var(--navBar-foreground-color);
         width: var(--time-section-width);
         font-size: 1.25em;
+        justify-content: right;
+        
+        > * {
+            margin-right: 10px;
+        }
     }
 }
 
@@ -116,7 +121,7 @@
             }
         }
         &__time{
-            justify-content: center
+            justify-content: center;
         }
     }
   }
