@@ -21,6 +21,9 @@
         padding: 10px;
         background: var(--system-secondary-background-color);
         text-align: center;
+        max-height: calc(100vh - 150px);
+        position: sticky;
+        top: 0px;
         h2 {
             margin-bottom: 30px;
         }
@@ -29,7 +32,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            > button {
+            > a {
                 display: flex;
                 width: 80%;
                 &:nth-child(odd) {
@@ -54,7 +57,7 @@
 
         &-body {
             .professional {
-                > div {
+                > section {
                     margin-bottom: 70px;
                     .company-header {
                         display: flex;
@@ -86,11 +89,14 @@
             grid-template-columns: 1fr;
         }
         &__index {
+            max-height: unset;
+            position: block;
+            top: 0px;
             > div {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: baseline;
-                > button {
+                > a {
                     justify-content: center;
                     &:nth-child(odd) {
                         justify-content: center;

@@ -3,8 +3,8 @@ import SystemButton from "../components/SystemButton/SystemButton";
 
 export default function Next() {
 
-  function scrollTo() {
-    console.log("scroll")
+  function openProjectWindow() {
+    console.log("OPEN")
   }
 
   return (
@@ -16,26 +16,26 @@ export default function Next() {
         <div className="web-projects__index">
           <h2>Professional Story</h2>
           <div>
-            <button><img src="/icons/pedestals/gavagai.png" /></button>
-            <button><img src="/icons/pedestals/insikt.png" /></button>
-            <button><img src="/icons/pedestals/tekman.png" /></button>
-            <button><img src="/icons/pedestals/tenea.png" /></button>
-            <button><img src="/icons/pedestals/skiverse.png" /></button>
+            <a href="#gavagai-body"><img src="/icons/pedestals/gavagai.png" /></a>
+            <a href="#insikt-body"><img src="/icons/pedestals/insikt.png" /></a>
+            <a href="#tekman-body"><img src="/icons/pedestals/tekman.png" /></a>
+            <a href="#tenea-body"><img src="/icons/pedestals/tenea.png" /></a>
+            <a href="#skiverse-body"><img src="/icons/pedestals/skiverse.png" /></a>
           </div>
         </div>
         <div className="web-projects__project">
           <div className="web-projects__project-banner">
-            <SystemButton buttonText="2019 - 2023 | Gavagai's front-end"      onTrigger={scrollTo} />
-            <SystemButton buttonText="2018 | Inviso's front-end"              onTrigger={scrollTo} />
-            <SystemButton buttonText="2016 - 2017 | Skivere's front-end"      onTrigger={scrollTo} />
-            <SystemButton buttonText="2016 | Lan Studio Web"                  onTrigger={scrollTo} />
-            <SystemButton buttonText="2015 | *Uni* | Sitges Festival Web" onTrigger={scrollTo} />
-            <SystemButton buttonText="2014 | *Uni* | Marble Hornets Web"  onTrigger={scrollTo} />
-            <SystemButton buttonText="2013 | *Uni* | Aperture Laboratories"   onTrigger={scrollTo} />
+            <SystemButton buttonText="2019 - 2023 | Gavagai's front-end"      onTrigger={openProjectWindow} />
+            <SystemButton buttonText="2018 | Inviso's front-end"              onTrigger={openProjectWindow} />
+            <SystemButton buttonText="2016 - 2017 | Skivere's front-end"      onTrigger={openProjectWindow} />
+            <SystemButton buttonText="2016 | Lan Studio Web"                  onTrigger={openProjectWindow} />
+            <SystemButton buttonText="2015 | *Uni* | Sitges Festival Web"     onTrigger={openProjectWindow} />
+            <SystemButton buttonText="2014 | *Uni* | Marble Hornets Web"      onTrigger={openProjectWindow} />
+            <SystemButton buttonText="2013 | *Uni* | Aperture Laboratories"   onTrigger={openProjectWindow} />
           </div>
           <div className="web-projects__project-body">
             <div className="professional">
-              <div className="gavagai-body">
+              <section id="gavagai-body">
                 <div className="company-header">
                   <div>
                     <h1>Gavagai</h1>
@@ -56,8 +56,8 @@ export default function Next() {
                   At the end of my time in Gavagai, I had learned to develop a big project in the Vue framework, implement unit testing in Jest, learn how to organize a team using scrum and agile methodology, eficcient pull request usage for continuous implementation, some express.js, among other stuff.
                   <br/><br/>
                 </p>
-              </div>
-              <div className="insikt-body">
+              </section>
+              <section id="insikt-body">
                 <div className="company-header">
                   <div>
                     <h1>Insikt</h1>
@@ -73,8 +73,8 @@ export default function Next() {
                   My main job in Insikt was to develop front-end functionalities in Angular for one of their products.
                   <br /><br/>
                 </p>
-              </div>
-              <div className="tekman-body">
+              </section>
+              <section id="tekman-body">
                 <div className="company-header">
                   <div>
                     <h1>Tekman</h1>
@@ -90,8 +90,8 @@ export default function Next() {
                   My main task in Tekman was to design and implement their onboarding system for students. I made research work to best implement this system and then overlapped it on the platform.
                   <br/><br/>
                 </p>
-              </div>
-              <div className="tenea-body">
+              </section>
+              <section id="tenea-body">
                 <div className="company-header">
                   <div>
                     <h1>Tenea</h1>
@@ -107,8 +107,8 @@ export default function Next() {
                   My main tasks in Tenea were to develop html frameworks and implementations for their various clients
                   <br/><br/>
                 </p>
-              </div>
-              <div className="skiverse-body">
+              </section>
+              <section id="skiverse-body">
                 <div className="company-header">
                   <div>
                     <h1>Skiverse</h1>
@@ -124,7 +124,7 @@ export default function Next() {
                   My main tasks in Skiverse was to develop their whole front-end. in twig, a PHP framework and vanilla html, js and css.
                   <br/><br/>
                 </p>
-              </div>
+              </section>
             </div>
             <div className="all">
 
