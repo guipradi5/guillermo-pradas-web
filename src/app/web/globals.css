@@ -45,13 +45,21 @@
         }
     }
     &__project {
+        h3 {
+            margin-bottom: 15px;
+        }
         &-banner {
             display:flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: 20px;
-             > button {
-                width: 49%;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: rgb(184, 184, 184) 2px solid;
+             > button.systemButton {
+                width: calc(50% - 5px);
+                padding: 0 10px;
+                text-align: left;
+                margin-bottom: 4px;
              }
         }
 
@@ -106,7 +114,7 @@
         }
         &__project {
             &-banner {
-                 > button {
+                 > button.systemButton {
                     width: 100%;
                     margin-bottom: 5px;
                  }
