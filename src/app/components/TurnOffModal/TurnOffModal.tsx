@@ -2,8 +2,8 @@
 import React, {useState, useEffect, useContext} from "react"
 import Window from "../Window/Window"
 import { GlobalContext } from "@/app/Home"
-import "./turnOffModal.css"
 import SystemButton from "../SystemButton/SystemButton"
+import "./TurnOffModal.css"
 
 const TurnOffModal = () => {
     const context = useContext(GlobalContext)
