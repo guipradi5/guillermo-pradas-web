@@ -6,7 +6,7 @@ import './Window.css'
 
 
 
-const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:boolean, modifiers?:string, position?:{top?:string, right?:string, bottom?:string, left?:string}, onClose?:Function }) => {
+const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:boolean, modifiers?:string, position?:{top?:string, right?:string, bottom?:string, left?:string, center?:boolean}, onClose?:Function }) => {
  
   const {windowTitle, children, isPage = false, modifiers, position, onClose} = props
 
@@ -27,6 +27,7 @@ const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:b
       ...(position.right ? {right: position.right} : {}),
       ...(position.bottom ? {bottom: position.bottom} : {}),
       ...(position.left ? {left: position.left} : {}),
+      ...(position.center ? {top: '50%', left: '50%', transform: 'translate(-50%, -50%'} : {}),
     } : {}
   }
 

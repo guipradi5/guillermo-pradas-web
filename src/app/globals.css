@@ -66,6 +66,7 @@ body {
   h2 {
     line-height: 0.8em;
     font-size: 1.75em;
+    margin-bottom: 0.5em;
   }
   h3 {
     line-height: 0.8em;
@@ -149,6 +150,9 @@ body {
       bottom: 55px;
       right: 5px;
       font-size: 1.1rem;
+      a {
+        color: white;
+      }
     }
   }
 

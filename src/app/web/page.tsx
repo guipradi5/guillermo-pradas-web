@@ -1,10 +1,48 @@
 "use client"
+import { useContext } from "react";
 import SystemButton from "../components/SystemButton/SystemButton";
+import { GlobalContext } from "../Home";
+import Explorer from "./projects/Explorer/Explorer";
+import Inviso from "./projects/Inviso/Inviso";
+import Skiverse from "./projects/Skiverse/Skiverse";
+import LanStudio from "./projects/LanStudio/LanStudio";
+import MarbleHornets from "./projects/MarbleHornets/MarbleHornets";
+import Aperture from "./projects/Aperture/Aperture";
 
 export default function Next() {
+  const context = useContext(GlobalContext)
 
-  function openProjectWindow() {
-    console.log("OPEN")
+  const projects = [
+    {
+      name: "Explorer - Gavagai",
+      component: Explorer()
+    },
+    {
+      name: "Inviso - Insikt Intelligence",
+      component: Inviso()
+    },
+    {
+      name: "Skiverse",
+      component: Skiverse()
+    },
+    {
+      name: "Lan Studio",
+      component: LanStudio()
+    },
+    {
+      name: "Marble Hornets",
+      component: MarbleHornets()
+    },
+    {
+      name: "Aperture Laboratories",
+      component: Aperture()
+    }
+
+  ]
+
+  function openProjectWindow(windowIndex: number) {
+    const project = projects[windowIndex]
+    context.actions.createWindow(project.name, project.component, true, {center: true})
   }
 
   return (
@@ -26,22 +64,21 @@ export default function Next() {
         <div className="web-projects__project">
           <h3>Specific projects:</h3>
           <div className="web-projects__project-banner">
-            <SystemButton buttonText="2019-2023 | Gavagai's front-end"    onTrigger={openProjectWindow} />
-            <SystemButton buttonText="2018 | Inviso's front-end"          onTrigger={openProjectWindow} />
-            <SystemButton buttonText="2016-2017 | Skiverse's front-end"   onTrigger={openProjectWindow} />
-            <SystemButton buttonText="2016 | Lan Studio Web"              onTrigger={openProjectWindow} />
-            <SystemButton buttonText="2015 | Uni | Sitges Festival Web"   onTrigger={openProjectWindow} />
-            <SystemButton buttonText="2014 | Uni | Marble Hornets Web"    onTrigger={openProjectWindow} />
-            <SystemButton buttonText="2013 | Uni | Aperture Laboratories" onTrigger={openProjectWindow} />
+            <SystemButton buttonText="2019-2023 | Explorer's front-end"   onTrigger={() => openProjectWindow(0)} />
+            <SystemButton buttonText="2018 | Inviso's front-end"          onTrigger={() => openProjectWindow(1)} />
+            <SystemButton buttonText="2016-2017 | Skiverse's front-end"   onTrigger={() => openProjectWindow(2)} />
+            <SystemButton buttonText="2016 | Lan Studio Web"              onTrigger={() => openProjectWindow(3)} />
+            <SystemButton buttonText="2014 | Uni | Marble Hornets Web"    onTrigger={() => openProjectWindow(4)} />
+            <SystemButton buttonText="2013 | Uni | Aperture Laboratories" onTrigger={() => openProjectWindow(5)} />
           </div>
           <div className="web-projects__project-body">
             <div className="professional">
               <section>
                 <h3>My story with web development</h3>
                 <p>
-                  I started web development in 2025 while studying Multimedia Engineering at university. I already had the idea of being a programmer once I finished studying, but I didn&apos;t know I would like it so much. I organized the team for the first big web project we had to do. We ended up doing a <a href="" target="_blank">website for Portal&apos;s fictional company, Aperture Science</a>, still pretty proud of that.
+                  I started web development in 2015 while studying Multimedia Engineering at university. I already had the idea of being a programmer once I finished studying, but I didn&apos;t know I would like it so much. I organized the team for the first big web project we had to do. We ended up doing a <a href="" target="_blank">website for Portal&apos;s fictional company, Aperture Science</a>, still pretty proud of that.
                   <br/><br/>
-                  In the following years I did a couple more projects, <a href="https://citmalumnes.upc.es/~guillermopdl/Marble_Hornets_Guillermo_Pradas/" target="_blank" >a mock website promoting my favorite webseries, Marble Hornets</a> and the website for what was then a creative studio I wanted to organize called <a href="https://citmalumnes.upc.es/~guillermopdl/lanStudio/" target="_blank" >Lan Studio</a>. The final big project for University was the adventure game demo <a href="https://citmalumnes.upc.es/~guillermopdl/blanknull/" target="_blank" >&quotblank(null)&quot</a>, an html based game using three.js, a WebGL library. From there I started working in tech companies as a front-end developer, designing and programming for all their webs, projects and products:
+                  In the following years I did a couple more projects, <a href="https://citmalumnes.upc.es/~guillermopdl/Marble_Hornets_Guillermo_Pradas/" target="_blank" >a mock website promoting my favorite webseries, Marble Hornets</a> and the website for what was then a creative studio I wanted to organize called <a href="https://citmalumnes.upc.es/~guillermopdl/lanStudio/" target="_blank" >Lan Studio</a>. The final big project for University was the adventure game demo <a href="https://citmalumnes.upc.es/~guillermopdl/blanknull/" target="_blank" >&quot;blank(null)&quot;</a>, an html based game using three.js, a WebGL library. From there I started working in tech companies as a front-end developer, designing and programming for all their webs, projects and products:
                 </p>
               </section>
               <section id="gavagai-body">

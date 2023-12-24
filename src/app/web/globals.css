@@ -23,6 +23,7 @@
         text-align: center;
         max-height: calc(100vh - 150px);
         position: sticky;
+        overflow: auto;
         top: 0px;
         h2 {
             margin-bottom: 30px;
