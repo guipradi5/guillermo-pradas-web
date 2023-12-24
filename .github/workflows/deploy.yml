@@ -33,6 +33,7 @@ jobs:
       
     - name: 🔨 Build Project
       run: |
+        npm install next@14.0.1 react@18 react-dom@18
         npm install
         npm run build
     
