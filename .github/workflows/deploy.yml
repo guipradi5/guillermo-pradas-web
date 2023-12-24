@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   # Build job
-  build & deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
