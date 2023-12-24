@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   # Build job
-  build:
+  build & deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -51,19 +51,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} run build
-
-  # Deployment job
-  web-deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-
-    - name: Push files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: 195.35.49.225
-        username: u214128411
-        password: ${{ secrets.ftp_password }}
-        local-dir: ./dist/
+      - name: Get latest code
+        uses: actions/checkout@v3
+      - name: Push files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: 195.35.49.225
+          username: u214128411
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./dist/
