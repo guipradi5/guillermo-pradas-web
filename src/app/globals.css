@@ -168,7 +168,6 @@ body {
   body {
     padding: 5px;
     background-attachment: fixed;
-    height: 100svh;
     
     .title{
       position: initial;
@@ -183,7 +182,7 @@ body {
       }
     }
     .desktop {
-      min-height: calc(100dvh - 10px - 90px);
+      min-height: calc(100svh - 10px - 90px);
       flex-direction: row;
       .apps {
         display: flex;
