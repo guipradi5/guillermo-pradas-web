@@ -2,9 +2,15 @@
     height: calc(100vh - 220px);
     max-width: 40vw;
     min-width: 700px;
-    img {
-        image-rendering: auto;
-        box-shadow: var(--shadow);
+    &__img {
+        margin-bottom: 15px;
+        a{
+            cursor: zoom-in;
+            img {
+                image-rendering: auto;
+                box-shadow: var(--shadow);
+            }
+        }
     }
 }
 
