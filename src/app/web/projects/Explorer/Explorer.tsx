@@ -21,7 +21,7 @@ export default function Explorer () {
             It’s a &quot;request a demo&quot; type of application but one can access the <a href="https://docs.gavagai.io" target="_blank">documentation to have a look at the screeshots and technology</a>.
             <br/><br/>
             {images.map((img) => (
-                <div className='project-window-body__img'>
+                <div key={img} className='project-window-body__img'>
                     <a href={img} target="_blank"><img src={img} /></a>
                 </div>
             ))}

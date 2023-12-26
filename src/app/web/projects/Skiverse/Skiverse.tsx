@@ -21,7 +21,7 @@ export default function Skiverse () {
           Made using <b>twig</b> (a php framework) and <b>vanilla HTML, JS, CSS and Jquery</b>.
           <br/><br/>
           {images.map((img) => (
-            <div className='project-window-body__img'>
+            <div key={img} className='project-window-body__img'>
                 <a href={img} target="_blank"><img src={img} /></a>
             </div>
           ))}
