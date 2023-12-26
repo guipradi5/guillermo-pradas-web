@@ -6,9 +6,9 @@ import './Window.css'
 
 
 
-const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:boolean, modifiers?:string, position?:{top?:string, right?:string, bottom?:string, left?:string, center?:boolean}, onClose?:Function }) => {
+const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:boolean, modifiers?:string, windowStyle?: Object, onClose?:Function }) => {
  
-  const {windowTitle, children, isPage = false, modifiers, position, onClose} = props
+  const {windowTitle, children, isPage = false, modifiers, windowStyle, onClose} = props
 
   const router = useRouter()
 
@@ -21,16 +21,6 @@ const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:b
     return classes
   }
 
-  const windowStyle = () => {
-    return position ? {
-      ...(position.top ? {top: position.top} : {}),
-      ...(position.right ? {right: position.right} : {}),
-      ...(position.bottom ? {bottom: position.bottom} : {}),
-      ...(position.left ? {left: position.left} : {}),
-      ...(position.center ? {top: '50%', left: '50%', transform: 'translate(-50%, -50%'} : {}),
-    } : {}
-  }
-
   function closeWindow(){
     if(onClose){
       onClose()
@@ -41,7 +31,7 @@ const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:b
   }
   
   return (
-    <div className={windowClasses()} style={windowStyle()}>
+    <div className={windowClasses()} style={windowStyle}>
       <div className="systemWindow__topBar">
         <div>{windowTitle}</div>
         <div className="systemWindow__topBar-buttons">

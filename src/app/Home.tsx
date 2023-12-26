@@ -13,12 +13,7 @@ type windowType = {
   id: string,
   title: string,
   body: React.JSX.Element,
-  position: {
-    top?: string,
-    right?: string,
-    bottom?: string,
-    left?: string
-  } | undefined,
+  windowStyle: any | undefined,
   free: boolean | undefined
 }
 
@@ -32,7 +27,7 @@ const initialState:initialStateType = {
 }
 
 const initialActions = {
-  createWindow: (title: string, body: React.JSX.Element, free:boolean, position:any) => {},
+  createWindow: (title: string, body: React.JSX.Element, free:boolean, windowStyle:any) => {},
   removeWindow: (id: string) => {}
 }
 
@@ -60,9 +55,9 @@ export default function Home({children}: {children: React.ReactNode}) {
     }
 
 
-    const createWindow = (title: string, body: React.JSX.Element, free:boolean, position:any) => {
+    const createWindow = (title: string, body: React.JSX.Element, free:boolean, windowStyle:any) => {
       let windows = state.windows
-      windows.push({id: (Math.random().toString(16).slice(2)), title, body, free, position})
+      windows.push({id: (Math.random().toString(16).slice(2)), title, body, free, windowStyle})
       context.mutators.setStateProperty('windows', windows)
     }
 
@@ -88,7 +83,7 @@ export default function Home({children}: {children: React.ReactNode}) {
     function windowElements() {
       return context.state.windows.map(
         (window: windowType) => 
-        <Window key={window.id} onClose={() => removeWindow(window.id)} windowTitle={window.title} position={window.position}>
+        <Window key={window.id} onClose={() => removeWindow(window.id)} windowTitle={window.title} windowStyle={window.windowStyle}>
           {window.body}
         </Window>
         )

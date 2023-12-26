@@ -42,7 +42,7 @@ export default function Next() {
 
   function openProjectWindow(windowIndex: number) {
     const project = projects[windowIndex]
-    context.actions.createWindow(project.name, project.component, true, {center: true})
+    context.actions.createWindow(project.name, project.component, true, {top: '50%', left: '50%', transform: 'translate(-50%, -50%)'})
   }
 
   return (
