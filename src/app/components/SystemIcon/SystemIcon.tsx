@@ -49,10 +49,10 @@ const SystemIcon = (props: any) => {
 
 
   return (
-    <div className={iconClass} onClick={handleClick} title={props.linkName}>
+    <a className={iconClass} onClick={handleClick} title={props.linkName}>
       <img src={props.imgsrc} />
-      <p>{props.linkName}</p>
-    </div>
+      <span>{props.linkName}</span>
+    </a>
   );
 };
 
