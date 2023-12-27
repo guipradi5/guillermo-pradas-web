@@ -112,6 +112,8 @@ export default function Home({children}: {children: React.ReactNode}) {
           <div className={titleClassName}>
             <h1 id="name">Guillermo Pradas</h1>
             <h2 id="job">Web Developer and Game Designer</h2>
+            <h3 className='secret'>Making <b>great and cool websites</b> since 2016 and actually <b>making games</b> from a fea years back.</h3>
+            <p className='secret'>My name is <b>Guillermo</b>. I'm a <b>web developer</b> and <b>game designer</b> based in Barcelona, Spain. I graduated in 2017 with a deegree in Multimedia Engineering in the 'Universitat Politècnica de Catalunya'</p>
           </div>
           <main className="desktop">
             <DesktopApps />
