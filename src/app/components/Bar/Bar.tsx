@@ -38,7 +38,7 @@ const Bar = () => {
       <div className="navBar__wrapper">
         <div className="navBar__circle" onClick={toggleBar}><img src="/icons/logo_trans.png"/></div>
         <div className="navBar__navigation">
-          <SystemButton buttonText="Turn Off" buttonImage="/icons/power.png" onTrigger={turnOff} />
+          <SystemButton buttonImage="/icons/power.png" onTrigger={turnOff} >Turn Off</SystemButton>
           
           <div className="navBar__navigation-links">
             <Link href="/" title="Main Page" onClick={() => setIsBarOpen(false)}><img src="/icons/logo_red_shadow_trans.png"/></Link>

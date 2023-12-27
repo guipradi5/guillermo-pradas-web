@@ -2,8 +2,9 @@
 import React from 'react';
 import './SystemButton.css'
 
-const SystemButton = ({buttonImage = '', buttonText = '', modifiers = '', href = '', onTrigger = () => {}}) => {
+const SystemButton = (props: {children: React.ReactNode, buttonImage?: string, title?: string, modifiers?: string, href?: string, onTrigger: Function}) => {
 
+  const {children, buttonImage, title, modifiers, href, onTrigger} = props
 
   const systemButtonClassName = "systemButton"
   let classModifiers = ''
@@ -13,11 +14,11 @@ const SystemButton = ({buttonImage = '', buttonText = '', modifiers = '', href =
   const buttonClasses = `${systemButtonClassName} ${classModifiers}`
 
   return (
-    <button className={buttonClasses} onClick={onTrigger}>
+    <button className={buttonClasses} onClick={() => onTrigger()}>
       {buttonImage ? (
-        <img src={buttonImage} title={buttonText} />
+        <img src={buttonImage} title={title} />
       ) : (
-        <span>{buttonText}</span>
+        <span>{children}</span>
       )}
       </button>
   );

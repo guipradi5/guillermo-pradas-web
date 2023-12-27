@@ -18,7 +18,7 @@ export default function Explorer () {
         <p>
             Worked on Exporer’s frontend using <b>Vue3</b>, <b>Stylus</b> as a CSS superset, <b>VueStore</b> for a store solution and connected to the node backend with <b>Express</b> for easing taskes like authentification and account “secrets”. Unit testing done in Jest.
             <br/><br/>
-            It’s a &quot;request a demo&quot; type of application but one can access the <a href="https://docs.gavagai.io" target="_blank">documentation to have a look at the screeshots and technology</a>.
+            It’s a "request a demo" type of application but one can access the <a href="https://docs.gavagai.io" target="_blank">documentation to have a look at the screeshots and technology</a>.
             <br/><br/>
             {images.map((img) => (
                 <div key={img} className='project-window-body__img'>

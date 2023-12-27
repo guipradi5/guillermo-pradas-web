@@ -64,21 +64,21 @@ export default function Next() {
         <div className="web-projects__project">
           <h3>Specific projects:</h3>
           <div className="web-projects__project-banner">
-            <SystemButton buttonText="2019-2023 | Explorer's front-end"   onTrigger={() => openProjectWindow(0)} />
-            <SystemButton buttonText="2018 | Inviso's front-end"          onTrigger={() => openProjectWindow(1)} />
-            <SystemButton buttonText="2016-2017 | Skiverse's front-end"   onTrigger={() => openProjectWindow(2)} />
-            <SystemButton buttonText="2016 | Lan Studio Web"              onTrigger={() => openProjectWindow(3)} />
-            <SystemButton buttonText="2014 | Uni | Marble Hornets Web"    onTrigger={() => openProjectWindow(4)} />
-            <SystemButton buttonText="2013 | Uni | Aperture Laboratories" onTrigger={() => openProjectWindow(5)} />
+            <SystemButton onTrigger={() => openProjectWindow(0)} ><b>2019-2023</b>| Explorer's front-end</SystemButton>
+            <SystemButton onTrigger={() => openProjectWindow(1)} ><b>2018</b> | Inviso's front-end</SystemButton>
+            <SystemButton onTrigger={() => openProjectWindow(2)} ><b>2016-2017</b> | Skiverse's front-end</SystemButton>
+            <SystemButton onTrigger={() => openProjectWindow(3)} ><b>2016</b> | Lan Studio Web</SystemButton>
+            <SystemButton onTrigger={() => openProjectWindow(4)} ><b>2014</b> | Uni | Marble Hornets Web</SystemButton>
+            <SystemButton onTrigger={() => openProjectWindow(5)} ><b>2013</b> | Uni | Aperture Laboratories</SystemButton>
           </div>
           <div className="web-projects__project-body">
             <div className="professional">
               <section>
                 <h3>My story with web development</h3>
                 <p>
-                  I started web development in 2015 while studying Multimedia Engineering at university. I already had the idea of being a programmer once I finished studying, but I didn&apos;t know I would like it so much. I organized the team for the first big web project we had to do. We ended up doing a <a href="" target="_blank">website for Portal&apos;s fictional company, Aperture Science</a>, still pretty proud of that.
+                  I started web development in 2015 while studying Multimedia Engineering at university. I already had the idea of being a programmer once I finished studying, but I didn't know I would like it so much. I organized the team for the first big web project we had to do. We ended up doing a <a href="" target="_blank">website for Portal's fictional company, Aperture Science</a>, still pretty proud of that.
                   <br/><br/>
-                  In the following years I did a couple more projects, <a href="https://citmalumnes.upc.es/~guillermopdl/Marble_Hornets_Guillermo_Pradas/" target="_blank" >a mock website promoting my favorite webseries, Marble Hornets</a> and the website for what was then a creative studio I wanted to organize called <a href="https://citmalumnes.upc.es/~guillermopdl/lanStudio/" target="_blank" >Lan Studio</a>. The final big project for University was the adventure game demo <a href="https://citmalumnes.upc.es/~guillermopdl/blanknull/" target="_blank" >&quot;blank(null)&quot;</a>, an html based game using three.js, a WebGL library. From there I started working in tech companies as a front-end developer, designing and programming for all their webs, projects and products:
+                  In the following years I did a couple more projects, <a href="https://citmalumnes.upc.es/~guillermopdl/Marble_Hornets_Guillermo_Pradas/" target="_blank" >a mock website promoting my favorite webseries, Marble Hornets</a> and the website for what was then a creative studio I wanted to organize called <a href="https://citmalumnes.upc.es/~guillermopdl/lanStudio/" target="_blank" >Lan Studio</a>. The final big project for University was the adventure game demo <a href="https://citmalumnes.upc.es/~guillermopdl/blanknull/" target="_blank" >"blank(null)"</a>, an html based game using three.js, a WebGL library. From there I started working in tech companies as a front-end developer, designing and programming for all their webs, projects and products:
                 </p>
               </section>
               <section id="gavagai-body">
@@ -115,7 +115,7 @@ export default function Next() {
                   </div>
                 </div>
                 <p>
-                  Insikt is another &quot;AI powered&quot; company. Their main focus is to develop cloud based applications that monitor and detect possible terror threats around the world. Their main clients are security companies.
+                  Insikt is another "AI powered" company. Their main focus is to develop cloud based applications that monitor and detect possible terror threats around the world. Their main clients are security companies.
                   <br /><br/>
                   My main job in Insikt was to develop front-end functionalities in <b>Angular</b> for one of their products. This was my first time touching a big application in a <b>Node</b> framework. This allowed me to learn a lot of the general Node intricacies, framework architecture and most importantly, <b>typescript</b>.
                   <br /><br/>

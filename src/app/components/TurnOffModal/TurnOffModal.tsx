@@ -33,8 +33,8 @@ const TurnOffModal = () => {
                     Are you sure about that?
                 </p>
                 <div className="button-wrapper">
-                    <SystemButton buttonText="Yes" modifiers="long" onTrigger={turnPageOff} />
-                    <SystemButton buttonText="No"  modifiers="long" onTrigger={hideTurnOffModal} />
+                    <SystemButton modifiers="long" onTrigger={turnPageOff} >Yes</SystemButton>
+                    <SystemButton modifiers="long" onTrigger={hideTurnOffModal} >No</SystemButton>
                 </div>
             </Window>
             <div className="turnedOff">

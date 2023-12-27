@@ -35,7 +35,7 @@ const Window = (props: {windowTitle:string, children: React.ReactNode, isPage?:b
       <div className="systemWindow__topBar">
         <div>{windowTitle}</div>
         <div className="systemWindow__topBar-buttons">
-        <SystemButton buttonText='X' modifiers='close' onTrigger={closeWindow} />
+        <SystemButton modifiers='close' onTrigger={closeWindow}>X</SystemButton>
         </div>
       </div>
       <div className="systemWindow__body">

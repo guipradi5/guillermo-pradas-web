@@ -17,11 +17,11 @@ export default function Inviso () {
       <p>
         Inviso is a monitoring application empowered by AI and crawler bots. 
         <br/><br/>
-        It&apos;s main purpose is that of detecting keywords in social media posts and store them in the backend so a record is saved for law enforcement to prosecute potential terror threads.
+        It's main purpose is that of detecting keywords in social media posts and store them in the backend so a record is saved for law enforcement to prosecute potential terror threads.
         <br/><br/>
         In my time in Insikt, in 2019, it was build in <b>Angular 6</b> with a <b>Redux state machine</b> and <b>typescript</b>.
         <br/><br/>
-        It&apos;s a private application so no access can be granted to it in normal circumstances. These are the only stills I was able to show, all features I developed:
+        It's a private application so no access can be granted to it in normal circumstances. These are the only stills I was able to show, all features I developed:
         <br/><br/>
         {images.map((img) => (
             <div key={img} className='project-window-body__img'>
