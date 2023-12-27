@@ -17,8 +17,8 @@ const LoadScreen = ({onReady = () => {}}) =>  {
                 setLoadingBarTime(1)
                 outTimeout = 1
             } else if(visited){
-                setLoadingBarTime(500)
-                outTimeout = 500
+                setLoadingBarTime(200)
+                outTimeout = 200
             } else {
                 localStorage.setItem('visited', 'true')
             }
@@ -28,8 +28,8 @@ const LoadScreen = ({onReady = () => {}}) =>  {
                 setTimeout(() => {
                     setStratupClasses(`${className} ${className}--out ${className}--hide`)
                     onReady()
-                }, 400)
-            }, outTimeout+400)
+                }, 200)
+            }, outTimeout+200)
         }
     }, [])
 
