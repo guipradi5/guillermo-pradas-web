@@ -5,7 +5,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Guillermo Pradas - About Me',
-  description: 'About Guillermo Pradas',
+  description: "About Guillermo Pradas, Web developer and game designer based in Barcelona. Always eager to create new works, art and projects. Here I explain a bit about me, my background and passions.",
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
