@@ -41,12 +41,12 @@ const Bar = () => {
           <SystemButton buttonImage="/icons/power.png" onTrigger={turnOff} >Turn Off</SystemButton>
           
           <div className="navBar__navigation-links">
-            <Link href="/" title="Main Page" onClick={() => setIsBarOpen(false)}><img src="/icons/logo_red_shadow_trans.png"/></Link>
-            <Link href="/blog" title="Blog" onClick={() => setIsBarOpen(false)}><img src="/icons/blog.png"/></Link>
-            <Link href="/about-me" title="About Me" onClick={() => setIsBarOpen(false)}><img src="/icons/person.png"/></Link>
-            <Link href="/web" title="Web Projects" onClick={() => setIsBarOpen(false)}><img src="/icons/internet.png"/></Link>
-            <Link href="/games" title="Game Projects" onClick={() => setIsBarOpen(false)}><img src="/icons/joystick.png"/></Link>
-            <a href="#" onClick={() => context.actions.createWindow('Contact', Contact(), true, {top: '120px', right: '25px'})} title="Contact"><img src="/icons/postcard.png"/></a>
+            <Link href="/" title="Desktop" onClick={() => setIsBarOpen(false)}><img alt="Desktop" src="/icons/logo_red_shadow_trans.png"/></Link>
+            <Link href="/blog" title="Blog" onClick={() => setIsBarOpen(false)}><img alt="Blog" src="/icons/blog.png"/></Link>
+            <Link href="/about-me" title="About Me" onClick={() => setIsBarOpen(false)}><img alt="About Me" src="/icons/person.png"/></Link>
+            <Link href="/web" title="Web Projects" onClick={() => setIsBarOpen(false)}><img alt="Web Projects" src="/icons/internet.png"/></Link>
+            <Link href="/games" title="Game Projects" onClick={() => setIsBarOpen(false)}><img alt="Game Projects" src="/icons/joystick.png"/></Link>
+            <a href="#" onClick={() => context.actions.createWindow('Contact', Contact(), true, {top: '120px', right: '25px'})} title="Contact"><img alt="Blog" src="/icons/postcard.png"/></a>
           </div>
         </div>
         <div className='navBar__time'>

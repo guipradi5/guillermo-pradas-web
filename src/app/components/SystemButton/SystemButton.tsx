@@ -16,7 +16,7 @@ const SystemButton = (props: {children: React.ReactNode, buttonImage?: string, t
   return (
     <button className={buttonClasses} onClick={() => onTrigger()}>
       {buttonImage ? (
-        <img src={buttonImage} title={title} />
+        <img alt={title} src={buttonImage} title={title} />
       ) : (
         <span>{children}</span>
       )}

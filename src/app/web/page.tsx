@@ -64,7 +64,7 @@ export default function Next() {
         <div className="web-projects__project">
           <h3>Specific projects:</h3>
           <div className="web-projects__project-banner">
-            <SystemButton onTrigger={() => openProjectWindow(0)} ><b>2019-2023</b>| Explorer's front-end</SystemButton>
+            <SystemButton onTrigger={() => openProjectWindow(0)} ><b>2019-2023</b> | Explorer's front-end</SystemButton>
             <SystemButton onTrigger={() => openProjectWindow(1)} ><b>2018</b> | Inviso's front-end</SystemButton>
             <SystemButton onTrigger={() => openProjectWindow(2)} ><b>2016-2017</b> | Skiverse's front-end</SystemButton>
             <SystemButton onTrigger={() => openProjectWindow(3)} ><b>2016</b> | Lan Studio Web</SystemButton>

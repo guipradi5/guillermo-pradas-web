@@ -17,6 +17,7 @@
     padding: 5px;
     margin: 0 10px 10px 0;
     text-decoration: none;
+    cursor: default;
     img {
         height: 50px;
         filter: var(--icon-shadow);

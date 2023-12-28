@@ -2,6 +2,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { useRouter } from 'next/navigation'
 import './SystemIcon.css'
+import Link from 'next/link';
 
 
 const SystemIcon = (props: any) => {
@@ -11,6 +12,9 @@ const SystemIcon = (props: any) => {
   let [iconClass,setIconClass] = useState(initialIconClass)
 
   const handleClick = (event:any) => {
+    if(event.preventDefault) {
+      event.preventDefault()
+    }
     switch (event.detail) {
       case 1: {
         setIconClass(`${initialIconClass} ${initialIconClass}--highlight`)
@@ -49,10 +53,10 @@ const SystemIcon = (props: any) => {
 
 
   return (
-    <a className={iconClass} onClick={handleClick} title={props.linkName}>
-      <img src={props.imgsrc} />
+    <Link className={iconClass} href={props.href ? props.href : ''} onClick={handleClick} title={props.linkName}>
+      <img alt={props.linkName} src={props.imgsrc} />
       <span>{props.linkName}</span>
-    </a>
+    </Link>
   );
 };
 
