@@ -4,7 +4,7 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
-  title: 'Guillermo Pradas - Web Projects',
+  title: 'Guillermo Pradas - Web Projects | Web Developer & Game Designer',
   description: "Web Projects by Guillermo Pradas. Companies and professional work. Industry professional since 2016. I'm a confident and reliable web developer, always eager to learn and experiment with whatever's new on the technological scene. From new framewroks to new ways of doing old stuff in front-end technologies."
 }
 

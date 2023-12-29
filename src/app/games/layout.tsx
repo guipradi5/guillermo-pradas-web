@@ -4,7 +4,7 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
-  title: 'Guillermo Pradas - Game Projects',
+  title: 'Guillermo Pradas - Game Projects | Web Developer & Game Designer',
   description: "Guillermo's game Projects as well as his work with Synaptic Oddity. Here you will find a portfolio of games I have worked on and made over the years, as well as information about future projects.",
 }
 
