@@ -5,8 +5,11 @@ import './SystemIcon.css'
 import Link from 'next/link';
 
 
-const SystemIcon = (props: any) => {
+const SystemIcon = (props: {linkName: string, imgsrc:string, href?: string, onTrigger?: Function}) => {
     
+  const {linkName, imgsrc, href, onTrigger} = props
+
+
   const router = useRouter()
   const initialIconClass = 'systemIcon'
   let [iconClass,setIconClass] = useState(initialIconClass)
@@ -22,10 +25,10 @@ const SystemIcon = (props: any) => {
       }
       case 2: {
         setIconClass(initialIconClass)
-        if(props.href){
-          router.push(props.href)
-        } else {
-          props.onTrigger()
+        if(href){
+          router.push(href)
+        } else if(onTrigger) {
+          onTrigger()
         }
         break;
       }
@@ -53,9 +56,9 @@ const SystemIcon = (props: any) => {
 
 
   return (
-    <Link className={iconClass} href={props.href ? props.href : ''} onClick={handleClick} title={props.linkName}>
-      <img alt={props.linkName} src={props.imgsrc} />
-      <span>{props.linkName}</span>
+    <Link className={iconClass} href={href ? href : ''} onClick={handleClick} title={linkName}>
+      <img alt={linkName} src={imgsrc} />
+      <span>{linkName}</span>
     </Link>
   );
 };
