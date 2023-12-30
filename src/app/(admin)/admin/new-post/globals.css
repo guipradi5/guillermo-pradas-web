@@ -1,0 +1,12 @@
+.ql-editor {
+    color: initial;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+     button {
+        margin-left: 10px;
+     }
+}

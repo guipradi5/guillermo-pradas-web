@@ -1,7 +1,7 @@
 'use client'
 import React, {useState, useEffect, useContext} from "react"
 import Window from "../Window/Window"
-import { GlobalContext } from "@/app/Home"
+import { GlobalContext } from "@Home"
 import SystemButton from "../SystemButton/SystemButton"
 import "./TurnOffModal.css"
 

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "VT323";
+  src: url("/fonts/VT323-Regular.ttf");
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-color1: #171c31;
+  --background-color2:rgb(19, 13, 29);
+  --bar-color: rgb(47, 43, 61);
+}
+
+html * {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  padding: var(--body-padding);
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(var(--background-color1), var(--background-color2));
+  height: 100vh;
+  padding: 20px;
+}
+.admin {
+  a {
+    text-decoration: underline;
+  }
+
+  button {
+    background: rgb(240, 240, 240);
+    color: black;
+    padding: 3px 10px;
+    border: rgb(184, 184, 184) 1px solid;
+    border-radius: 5px;
+  }
+
+  nav {
+    a {
+      margin-right: 20px;
+    }
+  }
+}

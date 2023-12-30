@@ -1,8 +1,8 @@
 'use client';
 import React, { useContext } from "react";
-import { GlobalContext } from "./Home";
-import SystemIcon from "./components/SystemIcon/SystemIcon";
-import Contact from "./components/Contact/Contact";
+import { GlobalContext } from "@Home";
+import SystemIcon from "@/components/SystemIcon/SystemIcon";
+import Contact from "@/components/Contact/Contact";
 
 const DesktopApps = () => {    
 

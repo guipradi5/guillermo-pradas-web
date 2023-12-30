@@ -24,7 +24,10 @@
     ],
     "paths": {
       "@/*": [
-        "./src/*"
+        "./src/*",
+      ],
+      "@Home": [
+        "./src/app/(main)/Home"
       ]
     }
   },

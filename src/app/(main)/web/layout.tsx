@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Window from "../components/Window/Window"
+import Window from "@/components/Window/Window"
 import './globals.css'
 
 

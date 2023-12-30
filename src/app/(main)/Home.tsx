@@ -2,11 +2,10 @@
 import React, {useState, useEffect} from 'react';
 import dynamic from 'next/dynamic'
 import DesktopApps from './DesktopApps'
-import Window from './components/Window/Window';
-import LoadScreen from './components/LoadScreen/LoadScreen';
-const Bar = dynamic(() => import("./components/Bar/Bar"), { ssr: false })
-import './globals.css'
-import TurnOffModal from './components/TurnOffModal/TurnOffModal';
+import Window from '@/components/Window/Window';
+import LoadScreen from '@/components/LoadScreen/LoadScreen';
+const Bar = dynamic(() => import("@/components/Bar/Bar"), { ssr: false })
+import TurnOffModal from '@/components/TurnOffModal/TurnOffModal';
 
 // TODO: See how to make the context its own independent file
 type windowType = {
@@ -101,29 +100,25 @@ export default function Home({children}: {children: React.ReactNode}) {
     }
   
     return (
-    <GlobalContext.Provider value={context}>
-      <html lang="en">
-        <body>
-          <div className="crtOverlay"></div>
-          { state.showTurnOffModal && 
-            <TurnOffModal />
-          }
-          <Bar />
-          <div className={titleClassName}>
-            <h1 id="name">Guillermo Pradas</h1>
-            <h2 id="job">Web Developer and Game Designer</h2>
-            <h3 className='secret'>Making <b>great and cool websites</b> since 2016 and <b>making nice and cool games</b> since a few years back.</h3>
-            <p className='secret'>My name is <b>Guillermo</b>. I'm a <b>web developer</b> and <b>game designer</b> based in Barcelona, Spain. I graduated in 2017 with a deegree in Multimedia Engineering in the 'Universitat Politècnica de Catalunya'. I love technology, arts, music and videogames. In this website you'll find all my projects and interesting stuff about those fields!</p>
-          </div>
-          <main className="desktop">
-            <DesktopApps />
-            {children}
-            { windowElements() }
-            <div className="credit">Artwork by <a href="https://martavidal.carrd.co/" target="_blank">Marta Vidal González</a></div>
-          </main>
-          <LoadScreen onReady={triggerTitleAnimation} />
-        </body>
-      </html>
+      <GlobalContext.Provider value={context}>
+        <div className="crtOverlay"></div>
+        { state.showTurnOffModal && 
+          <TurnOffModal />
+        }
+        <Bar />
+        <div className={titleClassName}>
+          <h1 id="name">Guillermo Pradas</h1>
+          <h2 id="job">Web Developer and Game Designer</h2>
+          <h3 className='secret'>Making <b>great and cool websites</b> since 2016 and <b>making nice and cool games</b> since a few years back.</h3>
+          <p className='secret'>My name is <b>Guillermo</b>. I'm a <b>web developer</b> and <b>game designer</b> based in Barcelona, Spain. I graduated in 2017 with a deegree in Multimedia Engineering in the 'Universitat Politècnica de Catalunya'. I love technology, arts, music and videogames. In this website you'll find all my projects and interesting stuff about those fields!</p>
+        </div>
+        <main className="desktop">
+          <DesktopApps />
+          {children}
+          { windowElements() }
+          <div className="credit">Artwork by <a href="https://martavidal.carrd.co/" target="_blank">Marta Vidal González</a></div>
+        </main>
+        <LoadScreen onReady={triggerTitleAnimation} />
       </GlobalContext.Provider>
     )
 }

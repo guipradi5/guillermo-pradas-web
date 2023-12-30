@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "VT323";
-  src: url("./fonts/VT323-Regular.ttf");
+  src: url("/fonts/VT323-Regular.ttf");
   font-weight: normal; 
   font-style: normal; 
 }
@@ -42,7 +42,7 @@ body {
   -webkit-font-smoothing : none;
   padding: var(--body-padding);
   color: rgb(var(--foreground-rgb));
-  background: url("./../../public/img/background-dark.png") !important;
+  background: url("/img/background-dark.png") !important;
   image-rendering: pixelated !important;
   background-size: cover !important;
   background-position: center !important;
@@ -86,7 +86,7 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 1000;
-    background-image: url(../../public/img/overlay2.png);
+    background-image: url(/img/overlay2.png);
     background-repeat: all;
     background-position: 0px 0px;
     opacity: 0.3;

@@ -3,7 +3,7 @@ import React, {useState, useRef, useEffect, useContext, Component, ReactHTML} fr
 import Link from 'next/link'
 import SystemButton from '../SystemButton/SystemButton';
 import './Bar.css'
-import { GlobalContext } from '../../Home';
+import { GlobalContext } from '@Home';
 import Contact from '../Contact/Contact';
 import CopyRight from '../Copyright/Copyright';
 

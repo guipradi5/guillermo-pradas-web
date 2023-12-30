@@ -1,7 +1,7 @@
 "use client"
 import { useContext } from "react";
-import SystemButton from "../components/SystemButton/SystemButton";
-import { GlobalContext } from "../Home";
+import SystemButton from "@/components/SystemButton/SystemButton";
+import { GlobalContext } from "@Home";
 import Explorer from "./projects/Explorer/Explorer";
 import Inviso from "./projects/Inviso/Inviso";
 import Skiverse from "./projects/Skiverse/Skiverse";

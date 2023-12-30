@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import "./globals.css"
-import SystemButton from "../components/SystemButton/SystemButton";
+import SystemButton from "@/components/SystemButton/SystemButton";
 
 export default function Games() {
 
