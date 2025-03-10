@@ -36,10 +36,12 @@ body {
     text-decoration: underline;
   }
 
+  button, input {
+    padding: 3px 10px;
+    color: black;
+  }
   button {
     background: rgb(240, 240, 240);
-    color: black;
-    padding: 3px 10px;
     border: rgb(184, 184, 184) 1px solid;
     border-radius: 5px;
   }
